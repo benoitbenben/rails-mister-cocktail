@@ -2,8 +2,8 @@ class Dose < ApplicationRecord
   belongs_to :cocktail
   belongs_to :ingredient
 
-  validate :description, presence: true
-  validate :ingredient, presence: true
-  validate :cocktail, presence: true
-  validates_uniqueness_of :cocktail, :ingredient
+  validates :description, presence: true
+  validates :ingredient, presence: true
+  validates :cocktail, presence: true
+  validates_uniqueness_of [:cocktail, :ingredient]
 end
