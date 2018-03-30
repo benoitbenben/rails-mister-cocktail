@@ -10,6 +10,7 @@ class CocktailsController < ApplicationController
 
   def new
     @cocktail = Cocktail.new
+
   end
 
   def edit
@@ -17,7 +18,7 @@ class CocktailsController < ApplicationController
   end
 
   def create
-    @cocktail = Cocktail.new(cocktail_params)
+    @cocktail = Cocktail.new(cocktails_params)
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else

@@ -1,6 +1,9 @@
 <h1> ma liste de cocktails</h1>
 <!-- each cocktail link vers nom cocktail(show > ingredient) -->
-
+<ul>
 <% @cocktails.each do |cocktail| %>
-<%= link_to coktail.name, cocktail_path(cocktail) %>
-<% end %>
+  <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+  <% end %>
+
+</ul>
+<%= link_to "new cocktail", new_cocktail_path %>

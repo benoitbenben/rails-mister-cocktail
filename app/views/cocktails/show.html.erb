@@ -1,4 +1,16 @@
 <!-- show.html.erb -->
-<!-- app/views/restaurants/show.html.erb -->
 <h1>More infos on <%= @cocktail[:name] %></h1>
-<p>Find us %></p>
+<p>Liste des doses: </p>
+<ul>
+  <% @cocktail.doses.each do |dose| %>
+  <li><%= dose.description %> - <%= dose.ingredient.name %></li>
+
+  <% end %>
+
+
+
+</ul>
+
+
+<%= link_to "retour liste", cocktails_path %>
+<!-- link_to "nom du lien", path avec rails routes : prefix_path(URI Pattern si :id) -->

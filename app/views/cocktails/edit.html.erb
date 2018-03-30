@@ -1,3 +1,16 @@
 <!-- edit.html.erb
  -->
  <%= render 'form', cocktail: @cocktail %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Editing Cocktail</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+    <%= render 'form', cocktail: @cocktail %>
+      <%= link_to 'cancel', cocktail_path(@cocktail) %>
+    </div>
+  </div>
+</div>
